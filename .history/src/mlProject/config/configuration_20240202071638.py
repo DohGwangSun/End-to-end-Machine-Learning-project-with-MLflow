@@ -2,7 +2,7 @@ import os, sys
 sys.path.append(os.path.dirname('src\mlProject'))
 from mlProject.constants import *
 from mlProject.utils.common import read_yaml, create_directories
-from mlProject.entity.config_entity import DataIngestionConfig
+from mlProject.entity import DataIngestionConfig
 
 class ConfigurationManager:
    def __init__(
@@ -16,7 +16,6 @@ class ConfigurationManager:
       self.schema = read_yaml(schema_filepath)
       
       create_directories([self.config.artifacts_root])
-   
       
    def get_data_ingestion_config(self) -> DataIngestionConfig:
       config = self.config.data_ingestion

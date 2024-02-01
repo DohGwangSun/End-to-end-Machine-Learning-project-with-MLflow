@@ -1,7 +1,6 @@
 import sys, os
 sys.path.append(os.path.dirname('src\mlProject'))
 from mlProject import logger
-from mlProject.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
 
 STAGE_NAME = "Data Ingestion stage"
 try:
@@ -12,4 +11,3 @@ try:
 except Exception as e:
    logger.exception(e)
    raise e
-
