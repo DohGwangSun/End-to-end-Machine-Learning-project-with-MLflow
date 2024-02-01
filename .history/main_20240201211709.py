@@ -1,5 +1,5 @@
-import sys, os
-sys.path.append(os.path.dirname('src\mlProject'))
+import os
+os.path.append(os.path.dirname(os.path.abspath(__file__)))
 from mlProject import logger
 
 
