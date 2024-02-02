@@ -91,7 +91,7 @@ class ConfigurationManager:
    
    
    
-   def get_model_evaluation_config(self) -> ModelEvaluationConfig:
+   def get_evaluation_config(self, config_name: str) -> ModelEvaluationConfig:
       config = self.config.model_evaluation
       params = self.params.ElasticNet
       schema = self.schema.TARGET_COLUMN
