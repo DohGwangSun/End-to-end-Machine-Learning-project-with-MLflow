@@ -33,7 +33,8 @@ def index():
          sulphates = float(request.form['sulphates'])
          alcohol = float(request.form['alcohol'])
          
-         data = [fixed_acidity, volatile_acidity, citric_acid, residual_sugar, chlorides, free_sulfur_dioxide, total_sulfur_dioxide, density, pH, sulphates, alcohol]         
+         data = [fixed_acidity, volatile_acidity, citric_acid, residual_sugar, chlorides, free_sulfur_dioxide, total_sulfur_dioxide, density, pH, sulphates, alcohol]
+         
          data = np.array(data).reshape(1, 11)
          
          obj = PredictionPipeline()
@@ -52,4 +53,3 @@ def index():
 
 if __name__ == '__main__':
    app.run(host='0.0.0.0', port=8080, debug=True)
-   
